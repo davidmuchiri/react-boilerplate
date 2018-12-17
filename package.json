@@ -1,26 +1,39 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Muchiri Njugi",
-  "license": "MIT",
-  "devDependencies": {
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2"
-  },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dinobambino7/react-boilerplate.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/dinobambino7/react-boilerplate/issues"
-  },
-  "homepage": "https://github.com/dinobambino7/react-boilerplate#readme"
+	"name": "react-boilerplate",
+	"version": "0.1.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --config webpack.config.prod.js",
+		"dev": "webpack-dev-server --config webpack.config.dev.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Muchiri Njugi",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.2.0",
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.0",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.4",
+		"html-webpack-plugin": "^3.2.0",
+		"webpack": "^4.27.1",
+		"webpack-cli": "^3.1.2",
+		"webpack-dev-server": "^3.1.10",
+		"webpack-merge": "^4.1.5"
+	},
+	"dependencies": {
+		"prop-types": "^15.6.2",
+		"react": "^16.6.3",
+		"react-dom": "^16.6.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dinobambino7/react-boilerplate.git"
+	},
+	"keywords": [],
+	"bugs": {
+		"url": "https://github.com/dinobambino7/react-boilerplate/issues"
+	},
+	"homepage": "https://github.com/dinobambino7/react-boilerplate#readme"
 }
