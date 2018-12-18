@@ -6,18 +6,30 @@ export default class DefaultErrorBoundary extends Component {
       children: PropTypes.node.isRequired
    };
 
-   state = { isError: false };
+   state = { isError: false, error: '', errorInfo: '' };
 
    static getDerivedStateFromError() {
       return { isError: true };
    }
 
+   componentDidCatch(error, errorInfo) {
+      this.setState({ error });
+      this.setState({ errorInfo });
+   }
+
    render() {
       const {
-         state: { isError },
+         state: { isError, error },
          props: { children }
       } = this;
 
-      return isError ? <div>Something went wrong !</div> : children;
+      return isError ? (
+         <div className="errorBoundary">
+            <p className="errorBoundary--title">Something went wrong!</p>
+            <p className="errorBoundary--error">{error.toString()}</p>
+         </div>
+      ) : (
+         children
+      );
    }
 }
